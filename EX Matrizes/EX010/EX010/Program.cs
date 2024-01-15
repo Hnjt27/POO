@@ -57,7 +57,7 @@ namespace EX010
 
                         if (up < 0 || up >= searchCol)
                         {
-                            Console.WriteLine("O valor acima do " + searchNum + " está fora da matrix");
+                            Console.WriteLine("O valor ACIMA do " + searchNum + " está fora da matrix");
                         }
                         else 
                         {
