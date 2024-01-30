@@ -24,6 +24,12 @@ namespace EX_013.Entities
         }
 
         public abstract double Tax();
+
+
+        public override string ToString()
+        {
+            return Tax().ToString();
+        }
     }
 
     
