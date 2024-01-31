@@ -15,9 +15,9 @@ namespace tabuleiro
         public Tabuleiro tab { get; protected set; }
 
 
-        public Peca(Position position, Cor cor, Tabuleiro tab )
+        public Peca(Cor cor, Tabuleiro tab )
         { 
-            this.position = position;
+            this.position = null;
             this.cor = cor; 
             this.tab = tab;
             QtdMovimentos = 0;

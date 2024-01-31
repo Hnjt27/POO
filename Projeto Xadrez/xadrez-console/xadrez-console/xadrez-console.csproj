@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="jogoDeXadrez\Torre.cs" />
+    <Compile Include="jogoDeXadrez\Rei.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tabuleiro\Cor.cs" />

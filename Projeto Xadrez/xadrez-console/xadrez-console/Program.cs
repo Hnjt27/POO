@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using tabuleiro;
+using jogoDeXadrez;
 
 namespace xadrez_console
 {
@@ -11,9 +12,12 @@ namespace xadrez_console
     {
         static void Main(string[] args)
         {
-           Tabuleiro tabuleiro = new Tabuleiro(8, 8);
+           Tabuleiro tab = new Tabuleiro(8, 8);
 
-           tela.imprimirTabuleiro(tabuleiro);
+            tab.ColocarPeca(new Rei(Cor.Preto, tab), new Position(3, 4));
+
+
+           tela.imprimirTabuleiro(tab);
 
 
             Console.ReadLine();
