@@ -10,14 +10,14 @@ namespace tabuleiro
     {
         public int Linhas { get; set; }
         public int Colunas { get; set; }
-        private Peca[,] pecas; 
+        private Peca[,] pecas;
 
         public Tabuleiro(int linhas, int colunas)
         {
             Linhas = linhas;
             Colunas = colunas;
             pecas = new Peca[Linhas, Colunas];
-          
+
         }
 
         public Peca peca(int linhas, int colunas)
@@ -25,11 +25,50 @@ namespace tabuleiro
             return pecas[linhas, colunas];
         }
 
-        public void ColocarPeca(Peca p, Position pos) 
+        public Peca peca(Position pos)
         {
-            pecas[pos.Line, pos.Column] = p;
-            p.position = pos;
+            return pecas[pos.Line, pos.Column];
+        }
+
+        public void ColocarPeca(Peca p, Position pos)
+        {
+            if (existePeca(pos))
+            {
+                throw new TabuleiroException("Ja existe uma peça nessa posição");
+            }
+            else
+            {
+                pecas[pos.Line, pos.Column] = p;
+                p.position = pos;
+            }
+        }
+
+        public bool PosicaoValida(Position pos)
+        {
+
+            if (pos.Line > 7 || pos.Line < 0 || pos.Column > 7 || pos.Column < 0)
+            {
+                return false;
+            }
+            return true;
 
         }
+
+        public void ValidarPosicao(Position pos)
+        {
+            if (!PosicaoValida(pos))
+            {
+                throw new TabuleiroException("Posição invalida");
+            }
+        }
+
+        public bool existePeca(Position pos)
+        {
+            ValidarPosicao(pos);
+            return peca(pos) != null;
+
+        }
+
     }
-}
+
+ }
