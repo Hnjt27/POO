@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7655DE97-F524-42D4-AC22-7A197DD902A3}</ProjectGuid>
+    <ProjectGuid>{4D0EE943-3590-4B5F-BF84-C04B3E9F8285}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>xadrez_console</RootNamespace>
-    <AssemblyName>xadrez-console</AssemblyName>
+    <RootNamespace>LojadeInstrumentos</RootNamespace>
+    <AssemblyName>LojadeInstrumentos</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,17 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="jogoDeXadrez\PosicaoXadrez.cs" />
-    <Compile Include="jogoDeXadrez\Torre.cs" />
-    <Compile Include="jogoDeXadrez\Rei.cs" />
+    <Compile Include="Entities\Clientes.cs" />
+    <Compile Include="Entities\Instrumentos.cs" />
+    <Compile Include="Entities\Loja_Instrumentos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="tabuleiro\Cor.cs" />
-    <Compile Include="tabuleiro\Peca.cs" />
-    <Compile Include="tabuleiro\Position.cs" />
-    <Compile Include="tabuleiro\Tabuleiro.cs" />
-    <Compile Include="tabuleiro\TabuleiroException.cs" />
-    <Compile Include="Tela.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
